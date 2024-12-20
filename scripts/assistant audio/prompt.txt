@@ -10,15 +10,12 @@ Respond with a JSON object structured as follows:
     },
     {
         "action": "action_id",
-        "parameters": {
-            "param1": "value1",
-            ...
-        }
+        "parameter":"content"
     }
 ]
 Actions available:
 
-write: Type with keyboard ({'text_to_write':'content'})
-presskey:  Press a keyboard key ({'key':'key'})
-openapp: Open an application ({'app_name':'app_name'})
-closeapp: Close an application ({'app_name':'app_name'})
+write: Type with keyboard
+presskey:  Press a keyboard key
+openapp: Open an application
+closeapp: Close an application
