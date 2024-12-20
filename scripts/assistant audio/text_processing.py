@@ -2,6 +2,9 @@ import ollama
 import os
 
 
+# ollama run llama3.2:3b
+# ollama status
+
 this_file_path = os.path.abspath(__file__)
 parent_directory = os.path.dirname(this_file_path)
 prompt_file_path = os.path.join(parent_directory, 'prompt.txt')
@@ -9,19 +12,14 @@ prompt_file_path = os.path.join(parent_directory, 'prompt.txt')
 pre_prompt = open(prompt_file_path, 'r').read() 
 
 def text_processing(user_prompt):
-    prompt = f"{pre_prompt}\n User prompt: {user_prompt}"
+    prompt = f"{user_prompt}\n\n{pre_prompt}"
 
-    response = ollama.chat(
-        model='llama3.2:3b', messages=[{'role': 'user', 'content': prompt}]
+    response = ollama.generate(
+        model='llama3.2:3b',prompt=prompt
     )
+    
+    print(response['response'])
 
-    print(response['message']['content'])
 
-# stream = ollama.chat(
-#     model='llama3.2:3b',
-#     messages=[{'role': 'user', 'content': prompt}],
-#     stream=True,
-# )
-
-# for chunk in stream:
-#     print(chunk['message']['content'], end='', flush=True)rue)
+if __name__ == '__main__':
+    text_processing(input('Enter prompt: \n'))

@@ -1,5 +1,6 @@
 appopener
 psutil
+ollama
 llama_stack
 RealtimeSTT
 huggingface-hub
