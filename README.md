@@ -38,4 +38,13 @@
     Train personalized wake word model.
     After text is processed, realise action.
   </li>
+  <li>
+    <strong>
+      10/01/25:
+    </strong>
+    Raspberry Pi arrived (later than expected).
+    Downloaded all O-LLama models and this GitHub repository.
+    <br>
+    Todo: 
+  </li>
 </ul>
