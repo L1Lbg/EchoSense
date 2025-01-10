@@ -13,7 +13,7 @@
 <p>
   <ul>
     <li>
-      Raspberry Pi 5 Model B
+      Raspberry Pi 5 + Kit
     </li>
   </ul>
 </p>
@@ -45,6 +45,6 @@
     Raspberry Pi arrived (later than expected).
     Downloaded all O-LLama models and this GitHub repository.
     <br>
-    Todo: 
+    Todo: Study the best AI model for performance on this Hardware, and continue developing the program.
   </li>
 </ul>
