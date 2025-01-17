@@ -1,0 +1,27 @@
+Actions available and their IDs:
+
+write: Type with keyboard
+presskey:  Press a keyboard key
+openapp: Open an application
+closeapp: Close an application
+
+actions list contains all the actions to realise,
+text is a string which contains human language explaining what is being done, be cordial.
+
+important: Respond only with a JSON object structured as follows:
+do not add anything else than the JSON.
+
+{
+    'actions':[
+        {
+            "action": "action_id",
+            "parameter":"content"
+        },
+        {
+            "action": "action_id",
+            "parameter":"content"
+        }
+    ], 
+    'text': 'example string'
+}
+

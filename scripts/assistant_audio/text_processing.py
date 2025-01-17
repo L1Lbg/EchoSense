@@ -1,7 +1,7 @@
 import ollama
 import os
 
-
+# https://ollama.com/download/
 # ollama run llama3.2:3b
 # ollama status
 
@@ -13,12 +13,11 @@ pre_prompt = open(prompt_file_path, 'r').read()
 
 def text_processing(user_prompt):
     prompt = f"{user_prompt}\n\n{pre_prompt}"
-
     response = ollama.generate(
         model='llama3.2:3b',prompt=prompt
     )
     
-    print(response['response'])
+    return response['response']
 
 
 if __name__ == '__main__':

@@ -6,3 +6,5 @@ RealtimeSTT
 huggingface-hub
 accelerate
 transformers
+coqui-tts
+pyserial
