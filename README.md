@@ -47,4 +47,16 @@
     <br>
     Todo: Study the best AI model for performance on this Hardware, and continue developing the program.
   </li>
+    <li>
+    <strong>
+      17/01/25:
+    </strong>
+    Added text to speech which will talk.
+    Did some prompt engineering to improve outcome.
+    Added actions processing so the script actually executes what's asked.
+    <br>
+    Todo: Study the best AI model for performance on this Hardware, and continue developing the program.
+    <br/>
+    Todo: Fix a bug where listener listens the first one but does not execute the rest of the script. Everything works after the seconds listening.
+  </li>
 </ul>
