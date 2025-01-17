@@ -1,8 +1,11 @@
 from RealtimeSTT import AudioToTextRecorder
 from scripts.assistant_audio.text_processing  import text_processing
 from scripts.assistant_audio.tts import text_to_speech
+from scripts.os.openapp import openapp
+from scripts.os.closeapp import closeapp
 import serial
 import json
+
 
 #arduino = serial.Serial(port='COM3', baudrate=9600, timeout=0.1)
 
@@ -24,6 +27,22 @@ def recording_started():
 def recording_finished():
     print("Speech end detected... processing...")
     send_to_arduino(2)
+
+def process_actions(actions:list):    
+    functions = { 
+        'openapp':{
+            'function':openapp
+        },
+        'closeapp':{
+            'function':closeapp
+        }
+    }
+    
+    for action in actions:
+        try:
+            functions[action['action']](action['parameter'])
+        except:
+            pass   
 
 keywords = [ # list of all possible interpretations of the word echo
     'echo','eco','eko', 'ecko',
@@ -53,9 +72,12 @@ if __name__ == '__main__':
         text_to_speech(processed_text['text'])
         print('ended converting to wav')
 
-
         send_to_arduino(3)
-        # todo: load the instructions
+
+        # load the instructions
+        process_actions(processed_text['actions'])
+
+
 
 
         send_to_arduino(1)
