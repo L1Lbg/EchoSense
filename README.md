@@ -57,6 +57,6 @@
     <br>
     Todo: Study the best AI model for performance on this Hardware, and continue developing the program.
     <br/>
-    Todo: Fix a bug where listener listens the first one but does not execute the rest of the script. Everything works after the seconds listening.
+    Todo: Fix a bug where keyword listener listens to the first keyword call but does not execute the rest of the script. Everything works after the second key word call.
   </li>
 </ul>
