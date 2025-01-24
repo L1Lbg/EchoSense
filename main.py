@@ -1,8 +1,10 @@
 from RealtimeSTT import AudioToTextRecorder
 from scripts.assistant_audio.text_processing  import text_processing
 from scripts.assistant_audio.tts import text_to_speech
+from scripts.assistant_audio.tts import text_to_speech
 from scripts.os.openapp import openapp
 from scripts.os.closeapp import closeapp
+from scripts.peripherals.write import write
 import serial
 import json
 
@@ -35,7 +37,13 @@ def process_actions(actions:list):
         },
         'closeapp':{
             'function':closeapp
-        }
+        },
+        'write':{
+            'function':write
+        },
+        # 'presskey':{
+        #     'function':presskey
+        # }
     }
     
     for action in actions:
