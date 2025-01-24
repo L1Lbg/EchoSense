@@ -5,8 +5,7 @@
   It is a virtual assistant that leverages AI to recognize speech and camera movements, allowing you to control your PC in a variety of ways:
 </p>
 <ul>
-  <li>Manage files</li>
-  <li>Search for information</li>
+  <li>Get information</li>
   <li>Open and interact with apps</li>
 </ul>
 <h2>Hardware</h2>
