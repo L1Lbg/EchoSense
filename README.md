@@ -58,4 +58,18 @@
     <br/>
     Todo: Fix a bug where keyword listener listens to the first keyword call but does not execute the rest of the script. Everything works after the second key word call.
   </li>
+
+  <li>
+    <strong>
+      07/02/25:
+    </strong>
+    Setup Ubuntu OS on Raspberry Pi and install everything.
+    Connect Raspberry with Script.
+    <br/>
+    Todo: Pursue developing the program.
+    <br/>
+    Todo: Install main script to Arduino.
+    <br/>
+    Todo: Fix a bug where keyword listener listens to the first keyword call but does not execute the rest of the script. Everything works after the second key word call.
+  </li>
 </ul>
