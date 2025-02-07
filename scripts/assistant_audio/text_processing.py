@@ -12,7 +12,7 @@ prompt_file_path = os.path.join(parent_directory, 'prompt.txt')
 pre_prompt = open(prompt_file_path, 'r').read() 
 
 def text_processing(user_prompt):
-    prompt = f"{user_prompt}\n\n{pre_prompt}"
+    prompt = f"{pre_prompt}\n\nUser Prompt:{user_prompt}"
     response = ollama.generate(
         model='llama3.2:3b',prompt=prompt
     )
@@ -21,4 +21,7 @@ def text_processing(user_prompt):
 
 
 if __name__ == '__main__':
-    text_processing(input('Enter prompt: \n'))
+    import time
+    start = time.time()
+    print(text_processing(input('Enter prompt: \n')))
+    print(f"Process done in {round(time.time() - start, 2)} seconds")
