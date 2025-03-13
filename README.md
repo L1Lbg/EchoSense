@@ -72,4 +72,13 @@
     <br/>
     Todo: Fix a bug where keyword listener listens to the first keyword call but does not execute the rest of the script. Everything works after the second key word call.
   </li>
+
+  <li>
+    <strong>
+      13/03/25:
+    </strong>
+    Todo: Find alternative to PyAutoGUI for Raspberry Pi 5.
+    <br/>
+    Todo: Keyword listener does not work on the Raspberry Pi 5 platform. An alternative must be found.
+  </li>
 </ul>
